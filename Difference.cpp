@@ -1,19 +1,35 @@
-#include <iostream>
-#include <string>
-#include <cctype>
 #include "header.h" //header file
 
-void diff(string guess, string wordle) // find difference between guess and wordle
+void correct_position(char correct_character) //printing right characters with right position, indicated by green colour
+{
+    printf("\033[32m[ "); 
+    printf("\033[32m%c", correct_character);
+    printf("\033[32m ]\033[0m");
+}
+void wrong_position(char wrong_position) //printing right characters with wrong position, indicated by yellow colour
+{
+    printf("\033[33m[ ");
+    printf("\033[33m%c", wrong_position);
+    printf("\033[33m ]\033[0m");
+}
+void wrong_character(char wrong_character) // printing normal tries
+{
+    printf("\033[0m[ ");
+    printf("\033[0m%c", wrong_character);
+    printf("\033[0m ]\033[0m");
+}
+
+void diff(string guess, string wordle) // indicate differences between guess and wordle
 {
 	for (int i = 0; i < guess.length(); i++) {
 		if (guess[i] == wordle[i]) {
-			cout << "letter " << itos(i + 1) << ": " << "right letter, right place." << endl;
+			correct_position(guess[i]);
 		}
 		else if (wordle.find(guess[i])) {
-			cout << "letter " << itos(i + 1) << ": " << "right letter, wrong place." << endl;
+			wrong_position(guess[i]);
 		}
 		else {
-			cout << "letter " << itos(i + 1) << ": " << "wrong letter." << endl;
+			wrong_character(guess[i]);
 		}
 	}
 }
