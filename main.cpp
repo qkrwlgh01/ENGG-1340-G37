@@ -17,6 +17,17 @@ int main()
         }
         
         // Update the game logic
+        string guess, wordle;
+        int guessing_time;
+        
+        // import of wordle (word to be guessed) missing
+        
+        // guessing 
+        for (int i = 0; i < guessing_time; i++) {
+            cout << "Make your guess " << "\(number of letter: " << itos(wordle.length()) << "\): ";
+            cin >> guess;
+            if (guess.length() != wordle.length()) {
+                cout << "Invalid "
         
         window.clear(); // Clear the window
         
