@@ -32,10 +32,14 @@ int main()
                 continue;
             }else{
                 diff(guess, wordle);
+                cout << "\n";
             }
 
             if (guess == wordle) {
-                cout << "
+                cout << "Correct!" << endl;
+                break;
+            }else{
+                cout << "Try again!" << endl;
         
         window.clear(); // Clear the window
         
