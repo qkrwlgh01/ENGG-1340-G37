@@ -1,4 +1,7 @@
-#include "header.h"
+#include <iostream>
+#include <string>
+#include <cctype>
+#include "header.h" //header file
 
 void diff(string guess, string wordle) // find difference between guess and wordle
 {
