@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cctype>
+#include "header.h"
 using namespace std;
 
 void diff(string guess, string wordle) // find difference between guess and wordle
