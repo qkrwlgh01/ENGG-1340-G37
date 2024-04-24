@@ -20,11 +20,12 @@ int main()
         string guess, wordle;
         int guessing_time;
         
-        // import of wordle (word to be guessed) (missing)
+        // import of wordle (word to be guessed) and guessing time (missing)
         
         // guessing 
         for (int i = 0; i < guessing_time; i++) {
             cout << "Make your guess " << "\(number of letters = " << itos(wordle.length()) << "\): ";
+            printf("Make your guess (%d-letter word)", wordle.length());
             cin >> guess;
             if (guess.length() != wordle.length()) {
                 i--;
@@ -32,7 +33,7 @@ int main()
                 continue;
             }else{
                 diff(guess, wordle);
-                cout << "\n";
+                printf("time remained: %d/%d", i + 1, guessing_time);
             }
 
             if (guess == wordle) {
