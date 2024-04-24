@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <cctype>
-#include <stdlib>
 #include "diff.h"
 using namespace std;
 
