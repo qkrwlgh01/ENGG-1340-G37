@@ -20,14 +20,22 @@ int main()
         string guess, wordle;
         int guessing_time;
         
-        // import of wordle (word to be guessed) missing
+        // import of wordle (word to be guessed) (missing)
         
         // guessing 
         for (int i = 0; i < guessing_time; i++) {
-            cout << "Make your guess " << "\(number of letter: " << itos(wordle.length()) << "\): ";
+            cout << "Make your guess " << "\(number of letters = " << itos(wordle.length()) << "\): ";
             cin >> guess;
             if (guess.length() != wordle.length()) {
-                cout << "Invalid "
+                i--;
+                cout << "Invalid word length." << endl;
+                continue;
+            }else{
+                diff(guess, wordle);
+            }
+
+            if (guess == wordle) {
+                cout << "
         
         window.clear(); // Clear the window
         
