@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "header.h"
 
 void correct_position(char correct_character) //printing right characters with right position, indicated by green colour
