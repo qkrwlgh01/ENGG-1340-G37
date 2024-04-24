@@ -2,7 +2,7 @@
 #include <string>
 #include <cctype>
 #include <stdlib>
-#include <diff.h>
+#include "diff.h"
 using namespace std;
 
 void diff(string guess, string wordle) // find difference between guess and wordle
