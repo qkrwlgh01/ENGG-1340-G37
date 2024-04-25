@@ -4,7 +4,7 @@
 #include "header.h"
 
 // ramdomly select specified number of words with specified length for the single game
-vector<string> select_words(vector<string> &words, int word_length, int num_words)
+vector<string> select_words(const vector<string>& words, int word_length, int num_words)
 {
     string word;
     int size = words.size();
