@@ -1,6 +1,3 @@
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
 #include <SFML/Graphics.hpp>
 #include "header.h" //header file
 
@@ -19,7 +16,6 @@ int main()
         }
         
         // Update the game logic
-        string guess, wordle, filename; // wordle = word to be guessed
         int word_length, num_words, num_tries;
 
         // Initialize game conditions
@@ -30,31 +26,37 @@ int main()
         printf("Number of tries you would like to have for each word? ");
         scanf("%d", &num_tries);
         
-        // Import  wordle (words to be guessed)
-        vector<string> wordles;
-        wordles = import_words(word_length, num_words);
+        // Load word.txt and select words for the game
+        vector<string> words; // storing all words in word.txt
+        vector<string> wordles; // storing words to be guessed
+        words = import_words();
+        wordles = select_words(
         
         
         // Guessing loop
-        for (int i = 0; i < num_tries; i++) 
+        string guess, wordle
+        for (int j = 0; j < num_words; j++) 
         {
-            printf("Your guess (%d-letter word)", word_length);
-            cin >> guess;
+            for (int i = 0; i < num_tries; i++) 
+            {
+                printf("Your guess: ");
+                cin >> guess;
             
-            if (guess.length() != word_length) {
-                i--;
-                cout << "Invalid word length!" << endl;
-                continue;
-            }else{
-                diff(guess, wordle);
-                printf("(%d/%d)\n", i + 1, num_tries);
-            }
+                if (guess.length() != word_length) {
+                    i--;
+                    cout << "Invalid word length!" << endl;
+                    continue;
+                }else{
+                    diff(guess, wordle);
+                    printf("(%d/%d)\n", i + 1, num_tries);
+                }
 
-            if (guess == wordle) {
-                cout << "Correct!" << endl;
-                break;
-            }else{
-                cout << "Try again!" << endl;
+                if (guess == wordle) { // showing winning / losing statements (to be changed)
+                    cout << "Correct!" << endl;
+                    break;
+                }else{
+                    cout << "Try again!" << endl;
+                }
             }
         }
         window.clear(); // Clear the window
