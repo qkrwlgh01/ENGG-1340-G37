@@ -23,14 +23,16 @@ int main()
         int word_length, num_words, num_tries;
 
         // Initialize game conditions
-        printf("Please select word length (5/7/9): ");
+        printf("Word length? ");
         scanf("%d", &word_length);
-        printf("Please select number of words to challenge: ");
-        scanf("%d", &num_words)
+        printf("Number of words to challenge? ");
+        scanf("%d", &num_words);
+        printf("Number of tries you would like to have for each word? ");
+        scanf("%d", &num_tries);
         
         // Import  wordle (words to be guessed)
         vector<string> wordles;
-        wordles = import_words(word_length);
+        wordles = import_words(word_length, num_words);
         
         
         // Guessing loop
