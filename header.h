@@ -6,6 +6,7 @@
 #include <vector>
 
 using namespace std;
+string to_lower_case(string);
 vector<string> import_words(int);
 void correct_position(char);
 void wrong_position(char);
