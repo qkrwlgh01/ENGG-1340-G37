@@ -23,7 +23,7 @@ int main()
         scanf("%d", &word_length);
         printf("Number of words to challenge? ");
         scanf("%d", &num_words);
-        printf("Number of tries you would like to have for each word? ");
+        printf("Number of tries for each word? ");
         scanf("%d", &num_tries);
         
         // Load word.txt and select words for the game
@@ -32,9 +32,8 @@ int main()
         words = import_words();
         wordles = select_words(&words, word_length, num_words);
         
-        
         // Guessing loop
-        string guess, wordle
+        string guess;
         for (int j = 0; j < num_words; j++) 
         {
             for (int i = 0; i < num_tries; i++) 
@@ -47,7 +46,7 @@ int main()
                     cout << "Invalid word length!" << endl;
                     continue;
                 }else{
-                    diff(guess, wordle);
+                    diff(guess, wordles[j]);
                     printf("(%d/%d)\n", i + 1, num_tries);
                 }
 
