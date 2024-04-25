@@ -4,7 +4,7 @@
 #include "header.h"
 
 // import all words in word.txt for selection afterwards
-vector<string> import_words(int word_length, int num_words)
+vector<string> import_words()
 {
     string word;
     vector<string> words;
