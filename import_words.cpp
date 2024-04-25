@@ -3,19 +3,16 @@
 #include <ctime>
 #include "header.h"
 
-vector<string> import_words(int word_length, int num_word)
+vector<string> import_words(int word_length, int num_words)
 {
     string word, filename;
     vector<string> words;
     ifstream fin("word.txt");
     
     while(fin >> word) {
-        if (word.length() == word_length)
-            words.push_back(word);
+        words.push_back(word);
     }
     fin.close();
 
-    srand(time(NULL));
-    for (int i = 0; i < 
     return words;
 }
