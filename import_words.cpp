@@ -5,7 +5,7 @@
 
 vector<string> import_words(int word_length, int num_words)
 {
-    string word, filename;
+    string word;
     vector<string> words;
     ifstream fin("word.txt");
     
