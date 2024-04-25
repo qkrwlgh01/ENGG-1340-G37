@@ -33,7 +33,7 @@ int main()
                 continue;
             }else{
                 diff(guess, wordle);
-                printf("time remained: %d/%d", i + 1, guessing_time);
+                printf("(%d/%d)\n", i + 1, guessing_time);
             }
 
             if (guess == wordle) {
