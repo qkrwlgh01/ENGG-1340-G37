@@ -1,6 +1,4 @@
 #include <fstream>
-#include <cstdlib>
-#include <ctime>
 #include "header.h"
 
 // import all words in word.txt for selection afterwards
