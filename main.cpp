@@ -30,7 +30,7 @@ int main()
         vector<string> words; // storing all words in word.txt
         vector<string> wordles; // storing words to be guessed
         words = import_words();
-        wordles = select_words(
+        wordles = select_words(&words, word_length, num_words);
         
         
         // Guessing loop
