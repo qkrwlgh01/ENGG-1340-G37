@@ -16,15 +16,15 @@ int main()
         }
         
         // Update the game logic
-        int word_length, num_words, num_tries;
+        int word_length, num_words, num_chances;
 
         // Initialize game conditions
         printf("Word length? ");
         scanf("%d", &word_length);
         printf("Number of words to challenge? ");
         scanf("%d", &num_words);
-        printf("Number of tries for each word? ");
-        scanf("%d", &num_tries);
+        printf("Number of chances for each word? ");
+        scanf("%d", &num_chances);
         
         // Load word.txt and select words for the game
         vector<string> words; // storing all words in word.txt
@@ -32,32 +32,40 @@ int main()
         words = import_words();
         wordles = select_words(&words, word_length, num_words);
         
-        // Guessing loop
-        string guess;
+        // Guess loop
         for (int j = 0; j < num_words; j++) 
         {
-            for (int i = 0; i < num_tries; i++) 
+            string guess, wordle;
+            wordle = wordles[j]; // correct word of the round
+            printf("Word %d:", j + 1);
+            for (int i = 0; i < num_chances; i++) // keep trying until correct guess or chance used up
             {
-                printf("Your guess: ");
-                cin >> guess;
+                printf("Your guess (%d/%d): ", i + 1, num_chances);
+                cin >> guess; // user guess
             
                 if (guess.length() != word_length) {
                     i--;
                     cout << "Invalid word length!" << endl;
                     continue;
                 }else{
-                    diff(guess, wordles[j]);
-                    printf("(%d/%d)\n", i + 1, num_tries);
-                }
-
-                if (guess == wordle) { // showing winning / losing statements (to be changed)
-                    cout << "Correct!" << endl;
-                    break;
-                }else{
-                    cout << "Try again!" << endl;
+                    diff(guess, wordle);
+                    if (guess == wordle) {
+                        cout << "Bingo!" << endl;
+                        break;
+                    }else{
+                        cout << "Try again!" << endl;
+                    }
                 }
             }
+            
+            if (i == num_chances) { // game over (to be modified)
+                break;
+            }
         }
+        if (j == num_words) {
+            // win (to be modified)
+        }
+        
         window.clear(); // Clear the window
         
         // Draw objects to the window
