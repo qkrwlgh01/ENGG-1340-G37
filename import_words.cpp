@@ -3,7 +3,7 @@
 #include <ctime>
 #include "header.h"
 
-vector<string> import_words(int word_length)
+vector<string> import_words(int word_length, int num_word)
 {
     string word, filename;
     vector<string> words;
