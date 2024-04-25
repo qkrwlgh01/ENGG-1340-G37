@@ -1,5 +1,6 @@
 #include <iostream>
-#include <fstream>
+#include <cstdlib>
+#include <ctime>
 #include <SFML/Graphics.hpp>
 #include "header.h" //header file
 
@@ -19,21 +20,28 @@ int main()
         
         // Update the game logic
         string guess, wordle, filename; // wordle = word to be guessed
-        int num_wordle, num_tries;
-        
-        // Import of wordle (words to be guessed)
-        ifstream fin;
-        fin.open(filename);
+        int word_length, num_words, num_tries;
 
+        // Initialize game conditions
+        printf("Please select word length (5/7/9): ");
+        scanf("%d", &word_length);
+        printf("Please select number of words to challenge: ");
+        scanf("%d", &num_words)
+        
+        // Import  wordle (words to be guessed)
         vector<string> wordles;
+        wordles = import_words(word_length);
+        
         
         // Guessing loop
-        for (int i = 0; i < num_tries; i++) {
-            printf("Make your guess (%d-letter word)", wordle.length());
+        for (int i = 0; i < num_tries; i++) 
+        {
+            printf("Your guess (%d-letter word)", word_length);
             cin >> guess;
-            if (guess.length() != wordle.length()) {
+            
+            if (guess.length() != word_length) {
                 i--;
-                cout << "Invalid word length." << endl;
+                cout << "Invalid word length!" << endl;
                 continue;
             }else{
                 diff(guess, wordle);
@@ -45,7 +53,8 @@ int main()
                 break;
             }else{
                 cout << "Try again!" << endl;
-        
+            }
+        }
         window.clear(); // Clear the window
         
         // Draw objects to the window
