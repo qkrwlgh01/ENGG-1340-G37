@@ -16,10 +16,11 @@ int main()
         }
         
         // Update the game logic
-        int word_length, num_words, num_chances;
+        //int word_length, num_words, num_chances;
+        int diffculty;
 
         // Initialize game conditions\
-        printf("Choose difficulty: ");
+        printf("Choose difficulty(1-easy, 2-medium, 3-hard, just type the number): ");
         scanf("%d", &difficulty);
         //printf("Word length? ");
         //scanf("%d", &word_length);
