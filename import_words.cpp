@@ -1,5 +1,5 @@
 #include <fstream>
-#include "inport_words_header.h"
+#include "import_words_header.h"
 
 // import all words in word.txt for selection afterwards
 vector<string> import_words()
