@@ -6,7 +6,7 @@ SOURCE_FILES = main.cpp to_lower_case.cpp select_words.cpp print_char.cpp import
 OBJECT_FILES = $(SOURCE_FILES:.cpp=.o)
 EXECUTABLE = game
 
-DATA_FILES = word.txt winning.txt title.txt losing.txt easter_egg.txt
+DATA_FILES = word.txt winning.txt title.txt losing.txt Easter_egg.txt
 
 BUILD_DIR = ./build
 
