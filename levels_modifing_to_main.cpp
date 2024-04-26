@@ -1,3 +1,4 @@
+#include "import_words_header.h" // header for word input
 #include "game_levels.h" // header for level setup
 
 int main() {
