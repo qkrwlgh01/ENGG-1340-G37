@@ -18,13 +18,15 @@ int main()
         // Update the game logic
         int word_length, num_words, num_chances;
 
-        // Initialize game conditions
-        printf("Word length? ");
-        scanf("%d", &word_length);
-        printf("Number of words to challenge? ");
-        scanf("%d", &num_words);
-        printf("Number of chances for each word? ");
-        scanf("%d", &num_chances);
+        // Initialize game conditions\
+        printf("Choose difficulty: ");
+        scanf("%d", &difficulty);
+        //printf("Word length? ");
+        //scanf("%d", &word_length);
+        //printf("Number of words to challenge? ");
+        //scanf("%d", &num_words);
+        //printf("Number of chances for each word? ");
+        //scanf("%d", &num_chances);
         
         // Load word.txt and select words for the game
         vector<string> words; // storing all words in word.txt
