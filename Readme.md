@@ -17,6 +17,7 @@ Wordle, players have chances to guess a word(five to nine letter) in English. Th
 2.The player start guessing the words with limited chances
 3.If player can guess the word than he or she is winning the game, else he or she is losing.
 4.The player can still continue guessing more words after he or she guess the word correctly.
+<br />
 [Game Features](#Game_Feature)
 1. Permitting sharing without ruining <br />
 
