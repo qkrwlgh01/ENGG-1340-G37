@@ -1,11 +1,8 @@
 [Team Member](#Team_Member)
-ENGG1340 Group Project 
+ENGG1340 Group Project <br />
 Group 37
 #Team_Member
------------ <<--------------------->> -----------
-
------------ <<----------->> -----------
-[**Chan Shun Hei**]#a
+**Chan Shun Hei**
 **Cheung Man Hin**
 **Park Ji Ho**
 **Wong Hei Long**
