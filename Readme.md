@@ -10,7 +10,6 @@ Group 37 <br />
 
 [Game Description](#Game_Description)
 
-</pre>
 \\\                     /|\     /======\         =========     =========\\       ||||          ===========     
  \\\       /|\       ///      ///      \\\\      ||       \\   ||        \\     |||||          ||     
   \\\    /// \\\    ///     ///          \\\     ||       //   ||         \\    |||||          ||               
@@ -18,7 +17,6 @@ Group 37 <br />
     \\\///     \\\///       \\\          ///     ||\\\\        ||          //   |||||          ||          
       \|/       \|/           \\\       ///      ||    \\      ||         //    |||||=======   ||              
        |         |              \=======/        ||      \\    || ========      |||||=======   ============
-<pre>
 Wordle, players have chances to guess a word(five to nine letter) in English. Three different types of feedback are possible for the player after each attempt: green indicates that the letter is in the right place, yellow indicates that the letter is in the wrong place, and gray indicates that the letter is missing from the answer. When the players get the word correctly, they win.
 
 [Game Rules](#Game_Rules)
