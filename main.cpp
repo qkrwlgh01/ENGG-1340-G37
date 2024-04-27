@@ -17,17 +17,16 @@ int main()
         
         // Update the game logic
         //int word_length, num_words, num_chances;
-        int diffculty;
 
         // Initialize game conditions\
-        printf("Choose difficulty(1-easy, 2-medium, 3-hard, just type the number): ");
-        scanf("%d", &difficulty);
-        //printf("Word length? ");
-        //scanf("%d", &word_length);
-        //printf("Number of words to challenge? ");
-        //scanf("%d", &num_words);
-        //printf("Number of chances for each word? ");
-        //scanf("%d", &num_chances);
+        //printf("Choose difficulty(1-easy, 2-medium, 3-hard, just type the number): ");
+        //scanf("%d", &difficulty);
+        printf("Word length? ");
+        scanf("%d", &word_length);
+        printf("Number of words to challenge? ");
+        scanf("%d", &num_words);
+        printf("Number of chances for each word? ");
+        scanf("%d", &num_chances);
         
         // Load word.txt and select words for the game
         vector<string> words; // storing all words in word.txt
