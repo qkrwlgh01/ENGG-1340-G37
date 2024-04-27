@@ -1,12 +1,12 @@
 [Team Member](#Team_Member)
 ENGG1340 Group Project <br />
-Group 37
-#Team_Member
-**Chan Shun Hei**
-**Cheung Man Hin**
-**Park Ji Ho**
-**Wong Hei Long**
-**Yik Yu Hang**
+Group 37 <br />
+#Team_Member <br />
+**Chan Shun Hei** <br />
+**Cheung Man Hin** <br />
+**Park Ji Ho** __
+**Wong Hei Long** <br />
+**Yik Yu Hang** <br />
 
 [Game Description](#Game_Description)
 
