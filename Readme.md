@@ -5,7 +5,7 @@ Group 37
 ----------- <<--------------------->> -----------
 
 ----------- <<----------->> -----------
-**Chan Shun Hei** 
+[**Chan Shun Hei**]
 **Cheung Man Hin**
 **Park Ji Ho**
 **Wong Hei Long**
