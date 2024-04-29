@@ -1,11 +1,9 @@
-#include <cctype>
-#include "header.h"
+#include <string>
+#include <cctype> // Includes character handling functions such as std::tolower.
 
-string to_lower_case(string word)
-{
-    for (int i = 0; i < word.length(); i++) {
-        word[i] = tolower(word[i]);
+std::string to_lower_case(std::string word) {
+    for (char& c : word) { // Range-based for loop to iterate over each character by reference.
+        c = std::tolower(c); // Converts each character to lowercase.
     }
-    
     return word;
 }
