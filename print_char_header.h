@@ -1,15 +1,9 @@
-#ifndef HEADER_H
-#define HEADER_H
+#ifndef PRINT_CHAR_HEADER_H
+#define PRINT_CHAR_HEADER_H
 
-#include <iostream>
-#include <string>
-#include <vector>
-
-using namespace std;
-string to_lower_case(string);
-void correct_position(char);
-void wrong_position(char);
-void wrong_character(char);
-void diff(string, string);
+// Function declarations for handling character display based on game logic.
+void correct_position(char correct_character);
+void wrong_position(char wrong_character);
+void wrong_character(char wrong_character);
 
 #endif
