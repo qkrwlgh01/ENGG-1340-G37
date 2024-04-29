@@ -1,29 +1,30 @@
+# Compiler and linker configurations
 CXX = g++
-CXXFLAGS = -Wall -std=c++11 -g
+CXXFLAGS = -Wall -g   # Compiler flags, -Wall for all warnings, -g for debugging information
+LDFLAGS =  # Linker flags
 
-HEADER_FILES = print_char_header.h import_words_header.h
-SOURCE_FILES = main.cpp to_lower_case.cpp select_words.cpp print_char.cpp import_words.cpp difference.cpp Graphic.cpp
-OBJECT_FILES = $(SOURCE_FILES:.cpp=.o)
-EXECUTABLE = game
+# Source files and headers
+SOURCES = main.cpp import_words.cpp print_char.cpp file_read_until.cpp select_words.cpp to_lower_case.cpp difference.cpp
+HEADERS = import_words_header.h print_char_header.h file_read_until.h scoreboard.h
+OBJECTS = $(SOURCES:.cpp=.o)   # Object files, derived from source files
 
-DATA_FILES = word.txt winning.txt title.txt losing.txt Easter_egg.txt
+# Executable name
+EXECUTABLE = wordle
 
-BUILD_DIR = ./build
+# Default target
+all: $(EXECUTABLE)   # Default make target builds the executable
 
-all: $(EXECUTABLE) copy_data
+# Link the program
+$(EXECUTABLE): $(OBJECTS)
+	$(CXX) $(LDFLAGS) -o $@ $^
 
-$(EXECUTABLE): $(OBJECT_FILES)
-	$(CXX) $(CXXFLAGS) -o $(BUILD_DIR)/$@ $^
-
-%.o: %.cpp $(HEADER_FILES)
+# Compile source files into objects
+%.o: %.cpp $(HEADERS)   # Pattern rule for object file generation from source files
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-copy_data:
-	@mkdir -p $(BUILD_DIR)/data
-	@cp $(DATA_FILES) $(BUILD_DIR)/data/
-
+# Clean up
 clean:
-	rm -f $(OBJECT_FILES) $(BUILD_DIR)/$(EXECUTABLE)
-	rm -rf $(BUILD_DIR)/data
+	rm -f $(OBJECTS) $(EXECUTABLE)   # Clean rule to remove object files and executable
 
-.PHONY: all clean copy_data
+# Phony targets
+.PHONY: all clean   # Declares 'all' and 'clean' as phony targets
