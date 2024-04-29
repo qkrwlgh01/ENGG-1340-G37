@@ -1,10 +1,10 @@
-#ifndef HEADER_H
-#define HEADER_H
+#ifndef IMPORT_WORDS_HEADER_H
+#define IMPORT_WORDS_HEADER_H
 
+#include <vector> // Include for using the vector container from the Standard Template Library (STL)
 #include <string>
-#include <vector>
 
-vector<string> import_words();
-vector<string> select_words(vector<string>& words, int word_length, int num_words);
+// Function declaration: imports words and returns them as a vector of strings
+std::vector<std::string> import_words();
 
 #endif
