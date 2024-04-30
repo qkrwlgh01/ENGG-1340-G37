@@ -1,11 +1,11 @@
 # README.md for ENGG1340 Group Project - Group 37
 
-## Team Members
-- **Chan Shun Hei**
-- **Cheung Man Hin**
-- **Park Ji Ho**
-- **Wong Hei Long**
-- **Yik Yu Hang**
+## Team Members & Contributions
+- **Chan Shun Hei** (20% of all coding)
+- **Cheung Man Hin** (20% of all coding)
+- **Park Ji Ho** (20% of main.cpp coding & Video editing)
+- **Wong Hei Long** (20% of all coding)
+- **Yik Yu Hang** (20% of all coding)
 
 ## Description of the Game: Wordle
 Wordle is a word puzzle game where players have six attempts to guess a target word. Each guess provides feedback in the form of colored tiles, indicating when letters match or occupy the correct position.
