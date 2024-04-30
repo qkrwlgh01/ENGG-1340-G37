@@ -68,4 +68,4 @@ The ANSI color codes (#define ANSI_COLOR_RED "\x1b[31m", etc.) we've defined sim
 2. ./wordle
 
 ## Video link
-
+https://www.youtube.com/watch?v=x3jnHM8hddg
